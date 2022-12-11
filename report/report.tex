@@ -19,7 +19,6 @@
 	linkbordercolor = {1 1 1}
 }
 
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{tikz-timing}[2009/05/15]
 \usepackage{multicol}
 \usepackage[T2A]{fontenc}
@@ -233,13 +232,17 @@ ECHO будет <<низким>> (0В) до тех пор, пока датчик
 		\begin{tikztimingtable}
 			Триггерный вход & LH7LlHL \\
 			Ультразвук & 5l [!wscale=\wscale/6!] 16{C} [!wscale=\wscale*6!] 6L[!wscale=\wscale/1.5!]l \\
-			Эхо-выход & 6L3Hl2L \\
+			Эхо-выход & 5l [!wscale=\wscale/6!] 16L [!wscale=\wscale*6!] 3Hh 5l[!wscale=\wscale/1.5!]l \\
 			\extracode
 			\begin{pgfonlayer}{background}
-				\node [anchor=south, inner sep=0pt, align=center] at (4.5,1.2) [fontscale=-2] {Подаётся 10 мкс импульс \\ на триггер};
+				\node [anchor=south, inner sep=0pt, align=center] at (4.5,1.2) [fontscale=-2] {Подаётся импульс \\ на триггер};
 				\node [anchor=south, inner sep=0pt, align=left] at (22,-1.5) [fontscale=-2] {Отправляется восемь \\ 40 кГц импульсов};
-				\node [anchor=south, inner sep=0pt, align=center] at (22,-4.5) [fontscale=-2] {Время между выпуском ультразвукового \\ импульса и его возвращением};
-				\draw[line width=0.5mm, {Stealth[length=2mm]}-{Stealth[length=2mm]}, blue] (18,-3.2) -- (27,-3.2);
+				\node [anchor=south, inner sep=0pt, align=center] at (21,-4.5) [fontscale=-2] {Время между выпуском ультразвукового \\ импульса и его возвращением};
+				\node [anchor=south, inner sep=0pt, align=center, blue] at (8.5,-2.4) [fontscale=-2] {25 мкс};
+				\node [anchor=south, inner sep=0pt, align=center, blue] at (4.5,-0.6) [fontscale=-2] {10 мкс};
+				\draw[line, <->, blue] (15.5,-3.2) -- (26,-3.2);
+				\draw[line, |-|, blue] (8,-2) -- (9,-2);
+				\draw[line, |-|, blue] (3,-0.2) -- (6,-0.2);
 			\end{pgfonlayer}
 		\end{tikztimingtable}
 	}
