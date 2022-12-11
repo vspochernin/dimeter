@@ -264,6 +264,14 @@ ECHO будет <<низким>> (0В) до тех пор, пока датчик
 Для наилучших результатов
 поверхность объекта для обнаружения должна иметь площадь не менее \(0,5 \text{ м}^2\).
 
+Ниже представлена \textbf{принципиальная схема HC-SR04}:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{screenshots/13.png}\\
+	\caption{Принципиальная схема HC-SR04}
+\end{figure}
+
 \newpage
 \section{Raspberry Pi 4B. GPIO}
 
@@ -272,10 +280,20 @@ ECHO будет <<низким>> (0В) до тех пор, пока датчик
 В первую очередь необходимо рассмотреть ключевые особенности этого интерфейса. И самое главное в GPIO Raspberry Pi – это pings (пины). Именно они используются для связи одноплатника с периферией.
 В совокупности есть 26 GPIO (портов). Все они являются \textit{цифровыми}.
 
+Ниже можно увидеть распиновку Raspberry Pi 4B:
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{screenshots/999.png}\\
-	\caption{Расширенная схема GPIO}
+	\includegraphics[width=12cm]{screenshots/14.png}\\
+	\caption{Распиновка Raspberry Pi 4B}
+\end{figure}
+
+А также описание её компонентов:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{screenshots/15.png}\\
+	\caption{Компоненты Raspberry Pi 4B}
 \end{figure}
 
 \subsection{Взаимодействие}
